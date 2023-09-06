@@ -44,7 +44,7 @@ class DeviceGemmInstanceLauncher {
 
 template <template <typename> typename DeviceGemmTemplate, typename DeviceGemmTraits>
 void DeviceGemmInstanceLauncher<DeviceGemmTemplate, DeviceGemmTraits>::Launch(FlashFwdParams &params, hipStream_t &stream) {
-  bool time_kernel = false;
+  bool time_kernel = true;
   bool input_permute = true;
   bool output_permute = true;
   bool z_tensor_permute = false;

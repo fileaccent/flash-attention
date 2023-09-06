@@ -85,7 +85,7 @@ using DeviceGemmQLoopHeadDim32 = device_op::DeviceGroupedMultiheadAttentionForwa
         8,
         8,
         true,  // B0BlockLdsExtraN
-        device_gemm_trait::S<16, 16, 1>,   // B1BlockTransfer
+        device_gemm_trait::S<8, 32, 1>,   // B1BlockTransfer
         device_gemm_trait::S<0, 2, 1>,
         device_gemm_trait::S<0, 2, 1>,
         1,
@@ -156,7 +156,7 @@ using DeviceGemmQLoopHeadDim64 = device_op::DeviceGroupedMultiheadAttentionForwa
         8,
         8,
         true,  // B0BlockLdsExtraN
-        device_gemm_trait::S<16, 16, 1>,   // B1BlockTransfer
+        device_gemm_trait::S<4, 64, 1>,   // B1BlockTransfer
         device_gemm_trait::S<0, 2, 1>,
         device_gemm_trait::S<0, 2, 1>,
         1,
@@ -371,7 +371,7 @@ using DeviceGemmKLoopHeadDim32 = device_op::DeviceGroupedMultiheadAttentionForwa
         8,
         8,
         true,  // B0BlockLdsExtraN
-        device_gemm_trait::S<16, 16, 1>,   // B1BlockTransfer
+        device_gemm_trait::S<8, 32, 1>,   // B1BlockTransfer
         device_gemm_trait::S<0, 2, 1>,
         device_gemm_trait::S<0, 2, 1>,
         1,
@@ -442,7 +442,7 @@ using DeviceGemmKLoopHeadDim64 = device_op::DeviceGroupedMultiheadAttentionForwa
         8,
         8,
         true,  // B0BlockLdsExtraN
-        device_gemm_trait::S<16, 16, 1>,   // B1BlockTransfer
+        device_gemm_trait::S<4, 64, 1>,   // B1BlockTransfer
         device_gemm_trait::S<0, 2, 1>,
         device_gemm_trait::S<0, 2, 1>,
         1,
